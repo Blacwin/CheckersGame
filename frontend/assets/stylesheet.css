@@ -1,0 +1,38 @@
+.field {
+    -fx-min-height:  50px;
+    -fx-min-width:   50px;
+    -fx-pref-height: 50px;
+    -fx-pref-width:  50px;
+    -fx-max-height:  50px;
+    -fx-max-width:   50px;
+}
+
+.light-field {
+    -fx-background-color: #FFCE9E;
+    -fx-background-radius: 0;
+}
+
+.dark-field {
+    -fx-background-color: #D18B47;
+    -fx-background-radius: 0;
+}
+
+.status-step {
+    /*-fx-background-color: #e9e9e9;*/
+    -fx-border-width: 10;
+    -fx-border-insets: 10;
+    -fx-border-color: #e5e500;
+    -fx-border-radius: 50;
+}
+
+.status-hit {
+    -fx-background-color: #ff0000;
+    /*-fx-border-width: 10;
+    -fx-border-insets: 5;
+    -fx-border-radius: 50;
+    -fx-border-color: #ff0000;*/
+}
+
+.status-selected {
+    -fx-background-color: #5bc0de;
+}
