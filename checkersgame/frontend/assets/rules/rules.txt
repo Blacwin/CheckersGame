@@ -1,0 +1,51 @@
+A Dáma Játék szabályai%
+A Dámát két játékos játssza, egyikük a fehér korongokat irányítja,%
+ellenfele a pirosakat. Mindkét játékos 12 koronggal kezdi a% játszmát.
++
+A játék célja%
+A játék célja hogy ellenfelünk összes korongját levegyük,%
+vagy mozgásképtelenné tegyük.
++
+Nyitás%
+A játék az alábbi pozicióból indul egy 64 mezõbõl álló 8x8-as% táblán.%
+A piros játékos kezd. Ezután a játékosok felváltva következnek.%
+Lépést nem lehet kihagyni.
++
+A játék menete%
+A lépés abból áll, hogy egyik korongunkat egy másik%
+átlósan szomszédos mezõre helyezzük.
++
+Ütés%
+A dámajátékban úgy lehet ütni, hogy átugorjuk az ellenfél% figuráját.%
++
+Az ütés szabályai 1:%
+Csak elõre lehet ütni, és csak akkor, ha az átugrandó figura mögötti% mezõ üres.%
+Ebbõl következõleg a tábla szélén álló figurát nem lehet leütni.%
+Nem lehet leütni saját figuránkat, és leütés nélkül átugrani sem.%
++
+Az ütés szabályai 2:%
+A klasszikus dámajáték szabályai szerint az ütés kötelezõ.%
+Ez azt jelenti, hogy ha a soron következõ játékosnak ütési lehetõsége% van, mindenképpen ütnie kell; természetesen õ választ a lehetséges% ütések közül, ha több figurájának is módja van ütni, illetve ugyanaz% a figura több irányba üthet.%
++
+Az ütés szabályai 3:%
+Ha az ütés után ugyanaz a figura tovább tud ütni arról a helyrõl,% ahova az ütéssel jutott, ugyanabban a lépésben folytathatja az ütést,% vagyis ütéssorozatot csinálhat.
++
+A Dáma%
+Az a figura, amely elérte a tábla szemközti sorát dámává lép elõ,%
+melyet megkülönböztetünk a többi bábutól.%
+A dáma speciális tulajdonsága hogy visszafelé is léphet és üthet.
++
+A játék vége%
+%
+Gyõzelem%
+Az a játékos nyer aki ellenfelét összes bábujától megszabadította%
+%
+Vereség%
+Az a játékos aki nem tud érvényes lépést véghezvinni, veszít.
++
+Jó játékot kívánok!%
+%
+A szabályokat bármikor elérheted a (?)Segítség menü pontban.%
+A játékot készítette:%
+Magyar Bálint%
+ELTE-IK Programtervező informatikus szak Bsc.

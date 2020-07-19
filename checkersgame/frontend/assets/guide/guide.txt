@@ -1,0 +1,7 @@
+﻿Útmutató a Dáma Játék használatához.%
+A következőkben rövid leírást olvashatsz a játékról, jelölésekről,% gombokról és azok funkciójáról.%
++
+Új játék panel.%
+Az új játék panelen tudod beállítani a játékot majd elindítani azt.%
+Lehetőséged van játékmódot, színt és oldalt választani, valamint%
+megadni a gépi ellenfél nehézségi szintjét.

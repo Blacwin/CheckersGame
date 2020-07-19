@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package checkersgame.frontend.components;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.ContentDisplay;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-/**
- *
- * @author Magyar Bálint
- */
 public class Field extends Button{
     private int x;
     private int y;
@@ -24,12 +16,13 @@ public class Field extends Button{
         this.setPrefSize(width, height);
         this.setMinSize(width, height);
         this.setMaxSize(width, height);
-        
-        //this.getStyleClass()
+
         if(light) {
             this.getStyleClass().add("light-field");
+            this.setStyle("-fx-background-image: url('checkersgame/frontend/assets/icons/light-wood.jpg')");
         }else {
             this.getStyleClass().add("dark-field");
+            this.setStyle("-fx-background-image: url('checkersgame/frontend/assets/icons/dark-wood.jpg')");
         }
     }
     
@@ -64,10 +57,26 @@ public class Field extends Button{
         this.getStyleClass().removeAll("status-step");
         this.getStyleClass().removeAll("status-hit");
         this.getStyleClass().removeAll("status-selected");
+        this.getStyleClass().removeAll("status-prev", "status-prevhit", "status-current");
     }
     
     public void setDefault() {
         removePiece();
         removeStyle();
+    }
+
+    public void setPrevField() {
+        removeStyle();
+        this.getStyleClass().add("status-prev");
+    }
+
+    public void setPrevHitField() {
+        removeStyle();
+        this.getStyleClass().add("status-prevhit");
+    }
+
+    public void setCurrentField() {
+        removeStyle();
+        this.getStyleClass().add("status-current");
     }
 }

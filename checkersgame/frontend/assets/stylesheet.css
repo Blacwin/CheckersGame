@@ -1,3 +1,13 @@
+.root {
+    -fx-base: rgb(50, 50, 50);
+    -fx-background: rgb(50, 50, 50);
+    -fx-control-inner-background: black;
+    -fx-text-fill: #ededed;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/*CHECKERS BOARD*/
 .field {
     -fx-min-height:  50px;
     -fx-min-width:   50px;
@@ -12,27 +22,318 @@
     -fx-background-radius: 0;
 }
 
+.light-field:focused {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 5, 4, 3;
+}
+
 .dark-field {
     -fx-background-color: #D18B47;
     -fx-background-radius: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.dark-field:focused {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-background-radius: 5, 4, 0, 2;
 }
 
 .status-step {
     /*-fx-background-color: #e9e9e9;*/
-    -fx-border-width: 10;
+    -fx-border-width: 2;
     -fx-border-insets: 10;
     -fx-border-color: #e5e500;
     -fx-border-radius: 50;
 }
 
 .status-hit {
-    -fx-background-color: #ff0000;
-    /*-fx-border-width: 10;
-    -fx-border-insets: 5;
+    /*-fx-background-color: #ff0000;*/
+    -fx-border-width: 2;
+    -fx-border-insets: 10;
     -fx-border-radius: 50;
-    -fx-border-color: #ff0000;*/
+    -fx-border-color: #ff0000;
 }
 
 .status-selected {
-    -fx-background-color: #5bc0de;
+    /*-fx-background-color: #5bc0de;*/
+    -fx-border-width: 4;
+    -fx-border-insets: 8;
+    -fx-border-color: #5bc0de;
+    -fx-border-radius: 50;
+    /*-fx-effect: innershadow( three-pass-box , rgba(91,192,222,0.9) , 20, 0.0 , 0 , 0 );*/
 }
+
+.status-prev {
+    -fx-border-width: 2;
+    -fx-border-insets: 10;
+    -fx-border-color: #707070;
+    -fx-border-radius: 50;
+}
+
+.status-prevhit {
+    -fx-border-width: 2;
+    -fx-border-insets: 10;
+    -fx-border-color: #ee0000;
+    -fx-border-radius: 50;
+}
+
+.status-current {
+    -fx-border-width: 10;
+    -fx-border-insets: 10;
+    -fx-border-color: #5bc0de;
+    -fx-border-radius: 50;
+}
+
+.board {
+    -fx-border-width: 10 10 2 2;
+    -fx-border-radius: 5;
+    -fx-border-color: #4f2f2f;
+    -fx-pref-height: 400px;
+    -fx-pref-width:  400px;
+    -fx-max-height:  400px;
+    -fx-max-width:   400px;
+    -fx-alignment: CENTER CENTER;
+    -fx-background-color: #4f2f2f;
+}
+
+/*LAYOUTS*/
+.main-button {
+/*    -fx-background-color: #101030;
+*/    -fx-pref-height: 40px;
+    -fx-pref-width:  200px;/*
+    -fx-text-fill: #ededed;
+    -fx-font: bolder 15px fantasy;*/
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(04,21,38,0.5), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.9), 0, 0.0, 0, 0);
+    -fx-font: bolder 15px fantasy;
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-padding: 10 20 10 20;
+}
+
+.main-button:hover {
+    -fx-effect: dropshadow( one-pass-box , rgba(20,20,20,0.5) , 0, 0.0 , 0 , 1 );
+    -fx-background-insets: 0,1,2,1;
+    -fx-background-color:
+            #090a0c,
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 100%, rgba(44,81,98,0.9), rgba(255,255,255,0));
+}
+
+.ingame-button {
+    -fx-pref-width:  150px;
+    -fx-font: bolder 14px fantasy;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+.ingame-button:hover {
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+.delete-file-button {
+    -fx-pref-width:  150px;
+    -fx-font: bolder 13px fantasy;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+    -fx-background-color: rgba(44,81,98,0.0)
+}
+
+.wide-button {
+    -fx-min-width: 500px;
+    -fx-min-height: 60px;
+    -fx-border-width: 30px;
+    -fx-background-image: url("icons/wide-button.png");
+    -fx-padding: 0 0 0 0;
+    -fx-font: bolder 15px fantasy;
+    -fx-text-fill: linear-gradient(white, #d5d5d5);
+}
+
+.wide-button:hover {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+    -fx-background-insets: 0,1,2,1;
+    -fx-background-image: url("icons/wide-button2.png");
+}
+
+.pane {
+    /*-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 30, 0.0 , 0 , 0 );*/
+    -fx-background-color: #1c2f2f;
+    -fx-text-fill: #ededed;
+}
+
+#texts {
+    -fx-font: bolder 15px fantasy;
+    -fx-text-fill:  #d5d5d5;
+}
+
+#main {
+    -fx-background-color: #fff;
+    -fx-background-image: url("checkers-background3.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+
+.menu-bar {
+    -fx-background-color: black;
+}
+
+.menu-bar .label {
+    -fx-text-fill: #fff;
+}
+
+.menu-item .label {
+    -fx-text-fill: #fff;
+}
+
+.radio-button {
+    -fx-font: bolder 15px fantasy;
+    -fx-text-fill: linear-gradient(white, #d5d5d5);
+}
+
+.label {
+    -fx-font: bolder 15px fantasy;
+    -fx-text-fill: linear-gradient(white, #d5d5d5);
+}
+
+.textfield-name {
+    -fx-font: bolder 15px fantasy;
+    -fx-alignment: center;
+}
+
+.textfield-name-light {
+    -fx-background-color: rgba(224,221,228,0.5);
+    -fx-text-fill: #303030;
+}
+
+.textfield-name-dark {
+    -fx-background-color: rgba(04,21,18,0.5);
+    -fx-text-fill: #e0e0e0;
+}
+
+.box {
+    -fx-padding: 10;
+    -fx-background-radius: 5.0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.9) , 9, 0.0 , 0 , 1 );
+    -fx-border-color: rgb(70,70,70);
+    -fx-border-width: 2px;
+    -fx-border-radius: 5.0;
+    -fx-alignment: center;
+}
+
+.box-center {
+    -fx-padding: 10;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.image-button {
+    -fx-background-color: rgba(0, 0, 0, 0.0);
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-cursor: hand;
+}
+
+.image-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 10em;
+}
+
+.light-box {
+    -fx-background-color: rgba(190,210,180,0.5);
+}
+
+.dark-box {
+    -fx-background-color: rgba(70,70,70,0.5);
+}
+
+.box-ingame {
+    -fx-padding: 10;
+    -fx-background-radius: 5.0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.9) , 20, 0.0 , 0 , 0 );
+    -fx-border-color: rgb(70,70,70);
+    -fx-border-width: 2px;
+    -fx-border-radius: 5.0;
+    -fx-alignment: TOP-CENTER;
+}
+
+.side-number-bottom {
+    -fx-pref-width: 70px;
+    -fx-min-height: 18px;
+    -fx-pref-height: 18px;
+    -fx-max-height: 18px;
+    -fx-alignment: TOP-CENTER;
+    -fx-background-color: #4f2f2f;
+}
+
+.side-number-left {
+    -fx-pref-height: 70px;
+    -fx-min-width: 16px;
+    -fx-max-width: 16px;
+    -fx-pref-width: 16px;
+    -fx-alignment: center center;
+    -fx-background-color: #4f2f2f;
+}
+
+.active-box {
+    /*-fx-background-color: #6f6f2f;*/
+    /*-fx-border-color: rgb(200,200,0);*/
+}
+
+.bottom-box {
+    -fx-alignment: center center;
+    -fx-min-width: 950px;
+    -fx-max-width: 950px;
+    -fx-pref-width: 950px;
+}
+
+.side-piece-buttons {
+    -fx-min-width: 22px;
+    -fx-max-width: 22px;
+    -fx-pref-width: 22px;
+    -fx-pref-height: 60px;
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+
+.title-label {
+    -fx-font: bolder 40px fantasy;
+    -fx-alignment: TOP-CENTER;
+    -fx-padding: 50px;
+}
+
+.rules-stage {
+    -fx-background-color: #e1e1f1;
+    /*-fx-background-image: url("checkers-background2.jpg");*/
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+    -fx-alignment: TOP-CENTER;
+    -fx-padding: 20px;
+}
+
+.rules-box {
+    -fx-alignment: CENTER;
+}
+
+.rules-label {
+    -fx-text-fill: #282828;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+}
+
